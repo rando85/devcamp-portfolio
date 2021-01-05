@@ -1,8 +1,9 @@
+<%= image_tag @portfolio_item.main_image unless @portfolio_item.main_image.nil? %>
 <h1><%= @portfolio_item.title %></h1>
 
-<p><%= @portfolio_item.subtitle %></p>
+<p><i><%= @portfolio_item.subtitle %></i></p>
 <p><%= @portfolio_item.body %></p>
-<%= image_tag @portfolio_item.main_image unless @portfolio_item.main_image.nil? %>
+
 <br>
 <%= link_to 'Edit', edit_portfolio_path(@portfolio_item) %> |
 <%= link_to 'Back', portfolios_path %>
