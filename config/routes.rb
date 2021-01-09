@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :portfolios, except: [:show]
   get 'angular-items', to: 'portfolios#angular'
   #this is how you override the default resource value, also, you can add your own custom route method
