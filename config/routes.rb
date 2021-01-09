@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
   resources :portfolios, except: [:show]
   get 'angular-items', to: 'portfolios#angular'
   #this is how you override the default resource value, also, you can add your own custom route method
